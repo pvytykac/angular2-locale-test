@@ -1,0 +1,16 @@
+<ul>
+  <li *ngFor="let locale of getLocales()">
+    <a href="#" (click)="setLocale($event, locale)">
+      <span>{{locale}}</span>
+      <span *ngIf="isSelected(locale)">(selected)</span>
+    </a>
+  </li>
+</ul>
+<hr/>
+<ul>
+  <li><a routerLink="people">People</a></li>
+  <li><a routerLink="person/1">Matus</a></li>
+  <li><a routerLink="person/2">Martin</a></li>
+</ul>
+<hr/>
+<router-outlet></router-outlet>
